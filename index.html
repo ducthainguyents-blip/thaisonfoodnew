@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thái Sơn Food</title>
+  <style>
+    *{box-sizing:border-box} body{margin:0;font-family:Arial,sans-serif;color:#1f2937;background:#fff}
+    a{text-decoration:none;color:inherit}
+    .top{position:sticky;top:0;background:#fff;border-bottom:1px solid #e5e7eb;z-index:10}
+    .wrap{max-width:1200px;margin:0 auto;padding:0 20px}
+    .nav{display:flex;justify-content:space-between;align-items:center;padding:16px 0}
+    .brand{font-size:28px;font-weight:800;color:#32d000}
+    .btn{display:inline-block;padding:12px 18px;border-radius:14px;font-weight:700}
+    .btn-green{background:#32d000;color:#111827}
+    .btn-dark{background:#111827;color:#fff}
+    .hero{padding:60px 0;background:linear-gradient(135deg,#f7fff2,#ffffff)}
+    .hero-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:36px;align-items:center}
+    .hero h1{font-size:54px;line-height:1.05;margin:0 0 18px}
+    .hero p{font-size:18px;line-height:1.7;color:#4b5563}
+    .card-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+    .card{border:1px solid #e5e7eb;border-radius:24px;overflow:hidden;background:#fff}
+    .card img{width:100%;height:220px;object-fit:cover;background:#f3f4f6}
+    .card .content{padding:18px}
+    .section{padding:70px 0}
+    .section h2{font-size:38px;margin:0 0 12px}
+    .muted{color:#6b7280;line-height:1.7}
+    .dark{background:#0f172a;color:#fff}
+    .dark .muted{color:#cbd5e1}
+    .certs{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .cert{border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.05);padding:24px;border-radius:24px}
+    .gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+    .gallery .card img{height:280px}
+    .contact{display:grid;grid-template-columns:1.1fr .9fr;gap:24px;background:#0f172a;color:#fff;border-radius:28px;padding:36px}
+    .contact-box{background:#fff;color:#111827;border-radius:24px;padding:24px}
+    .row{margin-bottom:14px}
+    .footer{border-top:1px solid #e5e7eb;padding:24px 0;color:#6b7280}
+    @media (max-width: 900px){
+      .hero-grid,.contact,.gallery{grid-template-columns:1fr}
+      .card-grid,.certs{grid-template-columns:repeat(2,1fr)}
+      .hero h1{font-size:40px}
+    }
+    @media (max-width: 640px){
+      .card-grid,.certs{grid-template-columns:1fr}
+      .hero h1{font-size:34px}
+    }
+  </style>
+</head>
+<body>
+  <div class="top">
+    <div class="wrap nav">
+      <div class="brand">THÁI SƠN FOOD</div>
+      <a class="btn btn-green" href="#contact">Liên hệ</a>
+    </div>
+  </div>
+
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <h1>Nhà máy chế biến nông sản sạch</h1>
+        <p>
+          Công ty TNHH Thực Phẩm Thái Sơn là nhà máy chế biến tại Đồng Tháp,
+          tập trung vào xoài sấy dẻo, dứa sấy dẻo, thanh long sấy dẻo và chanh dây sấy dẻo
+          phục vụ thị trường trong nước và xuất khẩu.
+        </p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:20px">
+          <a class="btn btn-dark" href="#products">Xem sản phẩm</a>
+          <a class="btn" style="border:1px solid #d1d5db" href="#contact">Liên hệ ngay</a>
+        </div>
+      </div>
+      <div>
+        <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=1400&auto=format&fit=crop" style="width:100%;border-radius:28px;border:1px solid #e5e7eb" alt="Factory" />
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="about">
+    <div class="wrap">
+      <h2>Về Thái Sơn Food</h2>
+      <p class="muted">
+        Địa chỉ: Lô A3 Khu công nghiệp Sông Hậu, Xã Lai Vung, Tỉnh Đồng Tháp.<br>
+        Điện thoại: +84 84 565 9398<br>
+        Email: sales@thaisonfood.com
+      </p>
+    </div>
+  </section>
+
+  <section class="section" id="products">
+    <div class="wrap">
+      <h2>Sản phẩm chủ lực</h2>
+      <p class="muted">Bạn thay ảnh thật của bạn vào sau. Trước mắt cứ để cấu trúc chạy online trước.</p>
+      <div class="card-grid" style="margin-top:26px">
+        <div class="card">
+          <img src="xoai.png" alt="Xoài sấy dẻo">
+          <div class="content"><strong>Xoài sấy dẻo</strong></div>
+        </div>
+        <div class="card">
+          <img src="dua.png" alt="Dứa sấy dẻo">
+          <div class="content"><strong>Dứa sấy dẻo</strong></div>
+        </div>
+        <div class="card">
+          <img src="thanh-long.png" alt="Thanh long sấy dẻo">
+          <div class="content"><strong>Thanh long sấy dẻo</strong></div>
+        </div>
+        <div class="card">
+          <img src="chanh-day.jpg" alt="Chanh dây sấy dẻo">
+          <div class="content"><strong>Chanh dây sấy dẻo</strong></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section dark" id="certifications">
+    <div class="wrap">
+      <h2>Chứng nhận</h2>
+      <p class="muted">GMP · HACCP · ISO 22000:2018</p>
+      <div class="certs" style="margin-top:24px">
+        <div class="cert"><h3>GMP</h3><p class="muted">Good Manufacturing Practices</p></div>
+        <div class="cert"><h3>HACCP</h3><p class="muted">Food safety control system</p></div>
+        <div class="cert"><h3>ISO 22000:2018</h3><p class="muted">Food Safety Management System</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <div class="wrap">
+      <div class="contact">
+        <div>
+          <h2 style="margin-top:0">Liên hệ hợp tác</h2>
+          <p class="muted">
+            Chúng tôi sẵn sàng trao đổi với nhà nhập khẩu, nhà phân phối,
+            khách hàng OEM / Private Label và đối tác xuất khẩu.
+          </p>
+        </div>
+        <div class="contact-box">
+          <div class="row"><strong>Công ty:</strong> Công ty TNHH Thực Phẩm Thái Sơn</div>
+          <div class="row"><strong>Địa chỉ:</strong> Lô A3 KCN Sông Hậu, Xã Lai Vung, Tỉnh Đồng Tháp</div>
+          <div class="row"><strong>Điện thoại:</strong> +84 84 565 9398</div>
+          <div class="row"><strong>Email:</strong> sales@thaisonfood.com</div>
+          <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:18px">
+            <a class="btn btn-green" href="tel:+84845659398">Call</a>
+            <a class="btn btn-dark" href="https://wa.me/84845659398">WhatsApp</a>
+            <a class="btn" style="border:1px solid #d1d5db" href="https://zalo.me/84845659398">Zalo</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="footer">
+    <div class="wrap">© 2026 Thái Sơn Food. All rights reserved.</div>
+  </div>
+</body>
+</html>
