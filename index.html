@@ -5,231 +5,347 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Thái Sơn Food</title>
   <meta name="description" content="Nhà máy chế biến nông sản sạch tại Đồng Tháp chuyên xoài sấy dẻo, dứa sấy dẻo, thanh long sấy dẻo và chanh dây sấy dẻo." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
-          colors: { brand: '#16a34a', dark: '#0f172a' },
-          boxShadow: { soft: '0 20px 60px rgba(15,23,42,.10)' }
+          colors: {
+            brand: '#14853B',
+            brand2: '#0F7A33',
+            soft: '#F5F7F2',
+            dark: '#18212B'
+          },
+          fontFamily: {
+            heading: ['Montserrat', 'sans-serif'],
+            body: ['Inter', 'sans-serif']
+          },
+          boxShadow: {
+            soft: '0 12px 40px rgba(15, 23, 42, .08)',
+            card: '0 8px 24px rgba(15, 23, 42, .06)'
+          },
+          borderRadius: {
+            xxl: '26px'
+          }
         }
       }
     }
   </script>
   <style>
     html { scroll-behavior: smooth; }
-    body { font-family: Arial, sans-serif; }
+    body { font-family: 'Inter', sans-serif; background:#f5f7f2; }
+    h1,h2,h3,h4,h5,h6 { font-family: 'Montserrat', sans-serif; }
   </style>
 </head>
-<body class="bg-white text-slate-900">
+<body class="text-slate-900">
 
-  <!-- TOP BAR -->
-  <div class="bg-white border-b border-slate-200">
-    <div class="max-w-7xl mx-auto px-4 lg:px-8 py-3 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-3">
-      <div class="flex items-center gap-3">
-        <div class="text-2xl font-black text-green-700">THÁI SƠN FOOD</div>
-      </div>
-      <div class="flex flex-wrap items-center gap-4 text-sm font-semibold text-slate-700">
-        <span>📍 Lô A3, KCN Sông Hậu, Xã Lai Vung, Đồng Tháp</span>
-        <span>📞 +84 84 565 9398</span>
-        <span>✉️ sales@thaisonfood.com</span>
-        <a href="https://wa.me/84845659398" class="bg-green-600 text-white px-3 py-1 rounded-lg">WhatsApp</a>
-        <a href="https://zalo.me/84845659398" class="bg-blue-500 text-white px-3 py-1 rounded-lg">Zalo</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- NAVBAR -->
-  <nav class="bg-green-800 text-white sticky top-0 z-50 shadow-md">
-    <div class="max-w-7xl mx-auto px-4 lg:px-8 py-4 flex flex-wrap gap-6 text-sm font-bold">
-      <a href="#home" class="hover:text-green-200">TRANG CHỦ</a>
-      <a href="#about" class="hover:text-green-200">GIỚI THIỆU</a>
-      <a href="#products" class="hover:text-green-200">SẢN PHẨM</a>
-      <a href="#certifications" class="hover:text-green-200">CHỨNG NHẬN</a>
-      <a href="#gallery" class="hover:text-green-200">THƯ VIỆN ẢNH</a>
-      <a href="#contact" class="hover:text-green-200">LIÊN HỆ</a>
-    </div>
-  </nav>
-
-  <!-- HERO -->
-  <section id="home" class="relative">
-    <img src="assets/factory-front.jpg" alt="Nhà máy Thái Sơn Food" class="w-full h-[620px] object-cover" />
-    <div class="absolute inset-0 bg-black/35"></div>
-
-    <div class="absolute inset-0 flex items-center">
-      <div class="max-w-7xl mx-auto px-4 lg:px-8 w-full">
-        <div class="max-w-xl text-white">
-          <h1 class="text-5xl md:text-7xl font-black leading-tight">
+  <!-- TOP HEADER -->
+  <header class="bg-white border-b border-slate-200">
+    <div class="max-w-[1280px] mx-auto px-4 lg:px-6">
+      <div class="h-[72px] flex items-center justify-between gap-4">
+        <div class="flex items-center gap-4 min-w-0">
+          <div class="text-[22px] md:text-[26px] font-heading font-black text-brand tracking-tight whitespace-nowrap">
             THÁI SƠN FOOD
-          </h1>
-          <h2 class="mt-3 text-2xl md:text-4xl font-black leading-tight">
-            NHÀ MÁY CHẾ BIẾN NÔNG SẢN SẠCH
-          </h2>
-          <p class="mt-5 text-lg leading-8 text-white/95">
-            Chuyên sản xuất và xuất khẩu các sản phẩm trái cây sấy dẻo chất lượng cao, đáp ứng tiêu chuẩn quốc tế.
-          </p>
-          <a href="#products" class="inline-block mt-7 bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-xl font-bold shadow-lg">
-            TÌM HIỂU THÊM →
-          </a>
-
-          <div class="mt-10 grid grid-cols-2 md:grid-cols-4 gap-4">
-            <div class="rounded-2xl bg-white/90 text-slate-900 p-4 text-center">
-              <div class="text-2xl">🌿</div>
-              <div class="mt-2 text-sm font-bold">100%<br>Nguyên liệu chọn lọc</div>
-            </div>
-            <div class="rounded-2xl bg-white/90 text-slate-900 p-4 text-center">
-              <div class="text-2xl">🛡️</div>
-              <div class="mt-2 text-sm font-bold">Sản xuất theo tiêu chuẩn quốc tế</div>
-            </div>
-            <div class="rounded-2xl bg-white/90 text-slate-900 p-4 text-center">
-              <div class="text-2xl">🏭</div>
-              <div class="mt-2 text-sm font-bold">Công nghệ hiện đại</div>
-            </div>
-            <div class="rounded-2xl bg-white/90 text-slate-900 p-4 text-center">
-              <div class="text-2xl">🌍</div>
-              <div class="mt-2 text-sm font-bold">Xuất khẩu toàn cầu</div>
-            </div>
           </div>
+        </div>
+
+        <div class="hidden xl:flex items-center gap-7 text-[14px] font-semibold text-slate-700">
+          <div class="flex items-center gap-2">
+            <span class="text-brand text-lg">📍</span>
+            <span>Lô A3, KCN Sông Hậu,<br class="hidden 2xl:block"> Xã Lai Vung, Đồng Tháp</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="text-brand text-lg">📞</span>
+            <span>+84 84 565 9398</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="text-brand text-lg">✉️</span>
+            <span>sales@thaisonfood.com</span>
+          </div>
+          <a href="https://wa.me/84845659398" class="bg-[#16A34A] text-white px-4 py-2 rounded-xl font-bold leading-none">WhatsApp</a>
+          <a href="https://zalo.me/84845659398" class="bg-[#2F80ED] text-white px-4 py-2 rounded-xl font-bold leading-none">Zalo</a>
+          <div class="border border-slate-200 rounded-xl px-3 py-2 leading-none font-bold">VI</div>
+        </div>
+
+        <div class="xl:hidden flex items-center gap-2">
+          <a href="https://wa.me/84845659398" class="bg-[#16A34A] text-white px-3 py-2 rounded-lg text-sm font-bold">WA</a>
+          <a href="https://zalo.me/84845659398" class="bg-[#2F80ED] text-white px-3 py-2 rounded-lg text-sm font-bold">Zalo</a>
         </div>
       </div>
     </div>
 
-    <div class="absolute right-3 md:right-6 top-1/2 -translate-y-1/2 hidden md:flex flex-col gap-3">
-      <a href="tel:+84845659398" class="bg-white rounded-2xl px-4 py-3 shadow-md text-center font-bold text-green-700">Call</a>
-      <a href="https://wa.me/84845659398" class="bg-white rounded-2xl px-4 py-3 shadow-md text-center font-bold text-green-700">WhatsApp</a>
-      <a href="https://zalo.me/84845659398" class="bg-white rounded-2xl px-4 py-3 shadow-md text-center font-bold text-blue-600">Zalo</a>
+    <!-- NAV -->
+    <nav class="bg-brand2 text-white">
+      <div class="max-w-[1280px] mx-auto px-4 lg:px-6">
+        <div class="h-[46px] flex items-center gap-8 overflow-x-auto whitespace-nowrap text-[14px] font-bold">
+          <a href="#home" class="hover:text-green-100">TRANG CHỦ</a>
+          <a href="#about" class="hover:text-green-100">GIỚI THIỆU</a>
+          <a href="#products" class="hover:text-green-100">SẢN PHẨM</a>
+          <a href="#capability" class="hover:text-green-100">NĂNG LỰC</a>
+          <a href="#process" class="hover:text-green-100">QUY TRÌNH SẢN XUẤT</a>
+          <a href="#certifications" class="hover:text-green-100">CHỨNG NHẬN</a>
+          <a href="#gallery" class="hover:text-green-100">THƯ VIỆN ẢNH</a>
+          <a href="#contact" class="hover:text-green-100">LIÊN HỆ</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section id="home" class="relative bg-white">
+    <div class="max-w-[1280px] mx-auto relative">
+      <div class="relative min-h-[640px] overflow-hidden bg-white">
+        <img src="assets/factory-front.jpg" alt="Thái Sơn Food Factory" class="absolute inset-0 w-full h-full object-cover" />
+
+        <div class="absolute inset-0 bg-[linear-gradient(90deg,rgba(255,255,255,0.98)_0%,rgba(255,255,255,0.94)_30%,rgba(255,255,255,0.15)_55%,rgba(255,255,255,0)_75%)]"></div>
+
+        <div class="relative z-10 grid lg:grid-cols-[440px_1fr] gap-0 min-h-[640px]">
+          <div class="px-6 md:px-10 pt-10 md:pt-14 pb-10 flex flex-col justify-start">
+            <h1 class="text-brand text-[46px] md:text-[64px] leading-[0.95] font-black tracking-tight">
+              THÁI SƠN FOOD
+            </h1>
+
+            <h2 class="mt-4 text-[#252525] text-[28px] md:text-[50px] leading-[1.02] font-black">
+              NHÀ MÁY CHẾ BIẾN NÔNG SẢN SẠCH
+            </h2>
+
+            <p class="mt-6 text-[18px] leading-8 text-slate-700 max-w-[360px]">
+              Chuyên sản xuất và xuất khẩu các sản phẩm trái cây sấy dẻo chất lượng cao, đáp ứng tiêu chuẩn quốc tế.
+            </p>
+
+            <div class="mt-8">
+              <a href="#about" class="inline-flex items-center gap-2 rounded-xl bg-brand px-7 py-4 text-[15px] font-bold text-white shadow-card hover:bg-[#0f7a33]">
+                TÌM HIỂU THÊM
+                <span>→</span>
+              </a>
+            </div>
+
+            <div class="mt-10 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-[430px]">
+              <div class="bg-white/95 rounded-2xl shadow-card border border-slate-200 px-3 py-4 text-center">
+                <div class="text-[28px]">🌿</div>
+                <div class="mt-2 text-[13px] leading-5 font-semibold">100%<br>Nguyên liệu chọn lọc</div>
+              </div>
+              <div class="bg-white/95 rounded-2xl shadow-card border border-slate-200 px-3 py-4 text-center">
+                <div class="text-[28px]">🛡️</div>
+                <div class="mt-2 text-[13px] leading-5 font-semibold">Sản xuất theo tiêu chuẩn quốc tế</div>
+              </div>
+              <div class="bg-white/95 rounded-2xl shadow-card border border-slate-200 px-3 py-4 text-center">
+                <div class="text-[28px]">🏭</div>
+                <div class="mt-2 text-[13px] leading-5 font-semibold">Công nghệ hiện đại</div>
+              </div>
+              <div class="bg-white/95 rounded-2xl shadow-card border border-slate-200 px-3 py-4 text-center">
+                <div class="text-[28px]">🌍</div>
+                <div class="mt-2 text-[13px] leading-5 font-semibold">Xuất khẩu toàn cầu</div>
+              </div>
+            </div>
+          </div>
+
+          <div></div>
+        </div>
+
+        <!-- FLOAT CONTACT -->
+        <div class="hidden md:flex absolute right-4 top-1/2 -translate-y-1/2 z-20 flex-col gap-3">
+          <a href="tel:+84845659398" class="w-[84px] rounded-2xl bg-white shadow-soft border border-slate-200 px-3 py-4 text-center">
+            <div class="text-[28px] text-brand">📞</div>
+            <div class="mt-1 text-[13px] font-bold text-slate-700">Call</div>
+          </a>
+          <a href="https://wa.me/84845659398" class="w-[84px] rounded-2xl bg-white shadow-soft border border-slate-200 px-3 py-4 text-center">
+            <div class="text-[28px] text-brand">🟢</div>
+            <div class="mt-1 text-[13px] font-bold text-slate-700">WhatsApp</div>
+          </a>
+          <a href="https://zalo.me/84845659398" class="w-[84px] rounded-2xl bg-white shadow-soft border border-slate-200 px-3 py-4 text-center">
+            <div class="text-[28px] text-[#2F80ED]">🔵</div>
+            <div class="mt-1 text-[13px] font-bold text-slate-700">Zalo</div>
+          </a>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- PRODUCTS -->
-  <section id="products" class="py-16 bg-white">
-    <div class="max-w-7xl mx-auto px-4 lg:px-8">
-      <h2 class="text-center text-4xl font-black text-green-700">SẢN PHẨM CHỦ LỰC</h2>
-      <div class="w-24 h-1 bg-green-600 mx-auto mt-3 rounded-full"></div>
+  <section id="products" class="bg-[#f5f7f2] py-12 md:py-14">
+    <div class="max-w-[1280px] mx-auto px-4 lg:px-6">
+      <div class="text-center">
+        <h2 class="text-[30px] md:text-[44px] font-black text-brand uppercase">SẢN PHẨM CHỦ LỰC</h2>
+        <div class="w-[90px] h-[5px] rounded-full bg-brand mx-auto mt-3"></div>
+      </div>
 
-      <div class="grid md:grid-cols-2 xl:grid-cols-4 gap-6 mt-12">
-        <div class="bg-white rounded-3xl shadow-md border border-slate-200 p-5 text-center hover:shadow-xl transition">
-          <img src="assets/product-mango.png" class="mx-auto h-44 object-contain" alt="Xoài sấy dẻo">
-          <h3 class="font-black mt-5 text-green-700 text-2xl">XOÀI SẤY DẺO</h3>
-          <p class="text-sm text-slate-600 mt-3 leading-7">Xoài chín tự nhiên, sấy dẻo giữ nguyên màu sắc, hương vị và giá trị dinh dưỡng.</p>
+      <div class="mt-10 grid md:grid-cols-2 xl:grid-cols-4 gap-6">
+        <div class="rounded-[28px] border border-slate-200 bg-white shadow-card p-6 text-center">
+          <div class="h-[210px] flex items-center justify-center">
+            <img src="assets/product-mango.png" alt="Xoài sấy dẻo" class="max-h-full max-w-full object-contain">
+          </div>
+          <h3 class="mt-4 text-[28px] font-black text-brand uppercase leading-tight">XOÀI SẤY DẺO</h3>
+          <p class="mt-3 text-[15px] leading-7 text-slate-600">
+            Xoài chín tự nhiên, sấy dẻo giữ nguyên màu sắc, hương vị và giá trị dinh dưỡng.
+          </p>
         </div>
 
-        <div class="bg-white rounded-3xl shadow-md border border-slate-200 p-5 text-center hover:shadow-xl transition">
-          <img src="assets/product-pineapple.png" class="mx-auto h-44 object-contain" alt="Dứa sấy dẻo">
-          <h3 class="font-black mt-5 text-green-700 text-2xl">DỨA SẤY DẺO</h3>
-          <p class="text-sm text-slate-600 mt-3 leading-7">Dứa ngọt thanh, sấy dẻo thơm ngon, giàu vitamin và khoáng chất.</p>
+        <div class="rounded-[28px] border border-slate-200 bg-white shadow-card p-6 text-center">
+          <div class="h-[210px] flex items-center justify-center">
+            <img src="assets/product-pineapple.png" alt="Dứa sấy dẻo" class="max-h-full max-w-full object-contain">
+          </div>
+          <h3 class="mt-4 text-[28px] font-black text-brand uppercase leading-tight">DỨA SẤY DẺO</h3>
+          <p class="mt-3 text-[15px] leading-7 text-slate-600">
+            Dứa ngọt thanh, sấy dẻo thơm ngon, giàu vitamin và khoáng chất.
+          </p>
         </div>
 
-        <div class="bg-white rounded-3xl shadow-md border border-slate-200 p-5 text-center hover:shadow-xl transition">
-          <img src="assets/product-dragonfruit.png" class="mx-auto h-44 object-contain" alt="Thanh long sấy dẻo">
-          <h3 class="font-black mt-5 text-green-700 text-2xl">THANH LONG SẤY DẺO</h3>
-          <p class="text-sm text-slate-600 mt-3 leading-7">Thanh long tươi sấy dẻo, màu sắc tự nhiên, giàu chất chống oxy hóa.</p>
+        <div class="rounded-[28px] border border-slate-200 bg-white shadow-card p-6 text-center">
+          <div class="h-[210px] flex items-center justify-center">
+            <img src="assets/product-dragonfruit.png" alt="Thanh long sấy dẻo" class="max-h-full max-w-full object-contain">
+          </div>
+          <h3 class="mt-4 text-[28px] font-black text-brand uppercase leading-tight">THANH LONG SẤY DẺO</h3>
+          <p class="mt-3 text-[15px] leading-7 text-slate-600">
+            Thanh long tươi sấy dẻo, màu sắc tự nhiên, giàu chất chống oxy hóa.
+          </p>
         </div>
 
-        <div class="bg-white rounded-3xl shadow-md border border-slate-200 p-5 text-center hover:shadow-xl transition">
-          <img src="assets/product-passionfruit.jpg" class="mx-auto h-44 object-contain" alt="Chanh dây sấy dẻo">
-          <h3 class="font-black mt-5 text-green-700 text-2xl">CHANH DÂY SẤY DẺO</h3>
-          <p class="text-sm text-slate-600 mt-3 leading-7">Chanh dây thơm lừng, vị chua ngọt hài hòa, giàu dinh dưỡng.</p>
+        <div class="rounded-[28px] border border-slate-200 bg-white shadow-card p-6 text-center">
+          <div class="h-[210px] flex items-center justify-center">
+            <img src="assets/product-passionfruit.jpg" alt="Chanh dây sấy dẻo" class="max-h-full max-w-full object-contain">
+          </div>
+          <h3 class="mt-4 text-[28px] font-black text-brand uppercase leading-tight">CHANH DÂY SẤY DẺO</h3>
+          <p class="mt-3 text-[15px] leading-7 text-slate-600">
+            Chanh dây thơm lừng, vị chua ngọt hài hòa, giàu dinh dưỡng.
+          </p>
         </div>
+      </div>
+
+      <div class="text-center mt-8">
+        <a href="#contact" class="inline-flex items-center gap-2 rounded-xl bg-brand px-7 py-4 text-[15px] font-bold text-white shadow-card hover:bg-[#0f7a33]">
+          XEM TẤT CẢ SẢN PHẨM
+          <span>→</span>
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- CERTIFICATIONS + GALLERY -->
-  <section id="certifications" class="py-16 bg-[#f7faf5] border-t border-b border-slate-200">
-    <div class="max-w-7xl mx-auto px-4 lg:px-8 grid lg:grid-cols-2 gap-10">
-      <div>
-        <h2 class="text-4xl font-black text-green-700">CHỨNG NHẬN QUỐC TẾ</h2>
-        <div class="grid grid-cols-3 gap-4 mt-8">
-          <div class="bg-white rounded-2xl border border-slate-200 p-3 text-center shadow-sm">
-            <img src="assets/THAI-SON-CERTIFICATES.pdf" alt="" class="hidden">
-            <div class="text-xl font-black text-green-700">GMP</div>
-            <div class="text-xs mt-2 text-slate-500">(TCVN 5603:2023)</div>
+  <!-- CERT + GALLERY -->
+  <section class="bg-[#eef3ea] py-12 md:py-14 border-t border-b border-[#dfe7d8]">
+    <div class="max-w-[1280px] mx-auto px-4 lg:px-6 grid lg:grid-cols-2 gap-8">
+      <div id="certifications">
+        <h2 class="text-[28px] md:text-[40px] font-black text-brand uppercase">CHỨNG NHẬN QUỐC TẾ</h2>
+
+        <div class="mt-6 grid grid-cols-3 gap-4">
+          <div class="rounded-2xl bg-white border border-slate-200 shadow-card p-4 text-center min-h-[165px] flex flex-col justify-center">
+            <div class="text-[26px] font-black text-brand">GMP</div>
+            <div class="mt-2 text-[12px] leading-5 text-slate-500">(TCVN 5603:2023)</div>
           </div>
-          <div class="bg-white rounded-2xl border border-slate-200 p-3 text-center shadow-sm">
-            <div class="text-xl font-black text-green-700">ISO 22000:2018</div>
-            <div class="text-xs mt-2 text-slate-500">Food Safety</div>
+          <div class="rounded-2xl bg-white border border-slate-200 shadow-card p-4 text-center min-h-[165px] flex flex-col justify-center">
+            <div class="text-[20px] font-black text-brand leading-tight">ISO<br>22000:2018</div>
+            <div class="mt-2 text-[12px] leading-5 text-slate-500">Food Safety</div>
           </div>
-          <div class="bg-white rounded-2xl border border-slate-200 p-3 text-center shadow-sm">
-            <div class="text-xl font-black text-green-700">HACCP</div>
-            <div class="text-xs mt-2 text-slate-500">(Codex Alimentarius)</div>
+          <div class="rounded-2xl bg-white border border-slate-200 shadow-card p-4 text-center min-h-[165px] flex flex-col justify-center">
+            <div class="text-[26px] font-black text-brand">HACCP</div>
+            <div class="mt-2 text-[12px] leading-5 text-slate-500">(Codex Alimentarius)</div>
           </div>
         </div>
-        <a href="assets/THAI-SON-CERTIFICATES.pdf" target="_blank" class="inline-block mt-6 border border-green-600 text-green-700 font-bold px-5 py-3 rounded-xl hover:bg-green-50">
-          XEM CHI TIẾT CHỨNG NHẬN →
-        </a>
+
+        <div class="mt-6">
+          <a href="assets/THAI-SON-CERTIFICATES.pdf" target="_blank" class="inline-flex items-center gap-2 rounded-xl border border-brand px-6 py-3 text-[14px] font-bold text-brand hover:bg-green-50">
+            XEM CHI TIẾT CHỨNG NHẬN
+            <span>→</span>
+          </a>
+        </div>
       </div>
 
       <div id="gallery">
-        <h2 class="text-4xl font-black text-green-700">HÌNH ẢNH NHÀ MÁY</h2>
-        <div class="grid grid-cols-3 gap-3 mt-8">
-          <img src="assets/factory-aerial.jpg" class="rounded-xl h-36 w-full object-cover" alt="">
-          <img src="assets/factory-front.jpg" class="rounded-xl h-36 w-full object-cover" alt="">
-          <img src="assets/factory-front.jpg" class="rounded-xl h-36 w-full object-cover" alt="">
-          <img src="assets/production.jpg" class="rounded-xl h-36 w-full object-cover" alt="">
-          <img src="assets/production.jpg" class="rounded-xl h-36 w-full object-cover" alt="">
-          <img src="assets/product-mango.png" class="rounded-xl h-36 w-full object-contain bg-white p-3 border border-slate-200" alt="">
+        <h2 class="text-[28px] md:text-[40px] font-black text-brand uppercase">HÌNH ẢNH NHÀ MÁY</h2>
+
+        <div class="mt-6 grid grid-cols-3 gap-3">
+          <img src="assets/factory-aerial.jpg" class="rounded-2xl h-[145px] w-full object-cover border border-slate-200 shadow-card" alt="">
+          <img src="assets/factory-front.jpg" class="rounded-2xl h-[145px] w-full object-cover border border-slate-200 shadow-card" alt="">
+          <img src="assets/factory-front.jpg" class="rounded-2xl h-[145px] w-full object-cover border border-slate-200 shadow-card" alt="">
+          <img src="assets/production.jpg" class="rounded-2xl h-[145px] w-full object-cover border border-slate-200 shadow-card" alt="">
+          <img src="assets/production.jpg" class="rounded-2xl h-[145px] w-full object-cover border border-slate-200 shadow-card" alt="">
+          <div class="rounded-2xl h-[145px] bg-white border border-slate-200 shadow-card flex items-center justify-center p-3">
+            <img src="assets/product-mango.png" class="max-h-full object-contain" alt="">
+          </div>
         </div>
-        <a href="#contact" class="inline-block mt-6 border border-green-600 text-green-700 font-bold px-5 py-3 rounded-xl hover:bg-green-50">
-          XEM THÊM HÌNH ẢNH →
-        </a>
+
+        <div class="mt-6">
+          <a href="#contact" class="inline-flex items-center gap-2 rounded-xl border border-brand px-6 py-3 text-[14px] font-bold text-brand hover:bg-green-50">
+            XEM THÊM HÌNH ẢNH
+            <span>→</span>
+          </a>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- VALUE -->
-  <section class="py-10 bg-white">
-    <div class="max-w-7xl mx-auto px-4 lg:px-8 grid md:grid-cols-2 xl:grid-cols-4 gap-6">
-      <div class="rounded-2xl border border-slate-200 p-5">
-        <div class="text-green-700 text-2xl">🌿</div>
-        <div class="font-black mt-2 text-green-700">NGUYÊN LIỆU CHỌN LỌC</div>
-        <div class="text-sm text-slate-600 mt-2 leading-7">100% trái cây tươi từ vùng nguyên liệu đạt chuẩn, an toàn và bền vững.</div>
+  <section id="capability" class="bg-[#f5f7f2] py-10">
+    <div class="max-w-[1280px] mx-auto px-4 lg:px-6 grid md:grid-cols-2 xl:grid-cols-4 gap-6">
+      <div class="rounded-2xl bg-white border border-slate-200 shadow-card p-6">
+        <div class="text-[30px]">🌿</div>
+        <div class="mt-2 text-[20px] font-black text-brand uppercase">NGUYÊN LIỆU CHỌN LỌC</div>
+        <div class="mt-3 text-[15px] leading-7 text-slate-600">100% trái cây tươi từ vùng nguyên liệu đạt chuẩn, an toàn và bền vững.</div>
       </div>
-      <div class="rounded-2xl border border-slate-200 p-5">
-        <div class="text-green-700 text-2xl">🛡️</div>
-        <div class="font-black mt-2 text-green-700">CÔNG NGHỆ HIỆN ĐẠI</div>
-        <div class="text-sm text-slate-600 mt-2 leading-7">Dây chuyền sấy hiện đại, kiểm soát chặt chẽ chất lượng.</div>
+
+      <div class="rounded-2xl bg-white border border-slate-200 shadow-card p-6">
+        <div class="text-[30px]">🛡️</div>
+        <div class="mt-2 text-[20px] font-black text-brand uppercase">CÔNG NGHỆ HIỆN ĐẠI</div>
+        <div class="mt-3 text-[15px] leading-7 text-slate-600">Dây chuyền sấy hiện đại, kiểm soát chặt chẽ chất lượng.</div>
       </div>
-      <div class="rounded-2xl border border-slate-200 p-5">
-        <div class="text-green-700 text-2xl">🏅</div>
-        <div class="font-black mt-2 text-green-700">ĐẠT CHUẨN QUỐC TẾ</div>
-        <div class="text-sm text-slate-600 mt-2 leading-7">Sản xuất theo GMP, HACCP, ISO 22000:2018.</div>
+
+      <div class="rounded-2xl bg-white border border-slate-200 shadow-card p-6">
+        <div class="text-[30px]">🏅</div>
+        <div class="mt-2 text-[20px] font-black text-brand uppercase">ĐẠT CHUẨN QUỐC TẾ</div>
+        <div class="mt-3 text-[15px] leading-7 text-slate-600">Sản xuất theo GMP, HACCP, ISO 22000:2018.</div>
       </div>
-      <div class="rounded-2xl border border-slate-200 p-5">
-        <div class="text-green-700 text-2xl">🌍</div>
-        <div class="font-black mt-2 text-green-700">XUẤT KHẨU TOÀN CẦU</div>
-        <div class="text-sm text-slate-600 mt-2 leading-7">Sản phẩm được xuất khẩu đến nhiều thị trường khó tính trên thế giới.</div>
+
+      <div class="rounded-2xl bg-white border border-slate-200 shadow-card p-6">
+        <div class="text-[30px]">🌍</div>
+        <div class="mt-2 text-[20px] font-black text-brand uppercase">XUẤT KHẨU TOÀN CẦU</div>
+        <div class="mt-3 text-[15px] leading-7 text-slate-600">Sản phẩm được xuất khẩu đến nhiều thị trường khó tính trên thế giới.</div>
       </div>
     </div>
   </section>
 
   <!-- CONTACT -->
-  <section id="contact" class="py-16 bg-[#0f172a]">
-    <div class="max-w-7xl mx-auto px-4 lg:px-8 grid lg:grid-cols-[1.1fr_0.9fr] gap-8 items-start">
+  <section id="contact" class="bg-dark py-14">
+    <div class="max-w-[1280px] mx-auto px-4 lg:px-6 grid lg:grid-cols-[1.15fr_0.85fr] gap-8 items-start">
       <div class="text-white">
-        <div class="text-sm uppercase tracking-[0.2em] text-slate-400 font-bold">Contact</div>
-        <h2 class="mt-3 text-4xl font-black">Liên hệ hợp tác</h2>
-        <p class="mt-5 max-w-2xl text-base leading-8 text-slate-300">
+        <div class="text-[13px] uppercase tracking-[0.25em] text-slate-400 font-bold">Contact</div>
+        <h2 class="mt-3 text-[34px] md:text-[48px] font-black">Liên hệ hợp tác</h2>
+        <p class="mt-5 max-w-2xl text-[17px] leading-8 text-slate-300">
           Chúng tôi sẵn sàng trao đổi với nhà nhập khẩu, nhà phân phối, khách hàng OEM / Private Label và đối tác xuất khẩu.
         </p>
       </div>
 
       <div class="bg-white rounded-[28px] p-6 shadow-soft">
-        <div class="text-xl font-black">Sales & Business Inquiry</div>
-        <div class="mt-6 space-y-4 text-sm leading-7 text-slate-600">
-          <div><div class="font-bold text-slate-900">Company</div><div>Công ty TNHH Thực Phẩm Thái Sơn</div></div>
-          <div><div class="font-bold text-slate-900">Address</div><div>Lô A3 KCN Sông Hậu, Xã Lai Vung, Tỉnh Đồng Tháp</div></div>
-          <div><div class="font-bold text-slate-900">Phone / WhatsApp / Zalo</div><div>+84 84 565 9398</div></div>
-          <div><div class="font-bold text-slate-900">Email</div><div>sales@thaisonfood.com</div></div>
+        <div class="text-[22px] font-black">Sales & Business Inquiry</div>
+
+        <div class="mt-6 space-y-4 text-[15px] leading-7 text-slate-600">
+          <div>
+            <div class="font-bold text-slate-900">Company</div>
+            <div>Công ty TNHH Thực Phẩm Thái Sơn</div>
+          </div>
+          <div>
+            <div class="font-bold text-slate-900">Address</div>
+            <div>Lô A3 KCN Sông Hậu, Xã Lai Vung, Tỉnh Đồng Tháp</div>
+          </div>
+          <div>
+            <div class="font-bold text-slate-900">Phone / WhatsApp / Zalo</div>
+            <div>+84 84 565 9398</div>
+          </div>
+          <div>
+            <div class="font-bold text-slate-900">Email</div>
+            <div>sales@thaisonfood.com</div>
+          </div>
         </div>
 
         <div class="mt-8 grid gap-3 sm:grid-cols-3">
-          <a href="tel:+84845659398" class="rounded-2xl bg-green-600 px-4 py-3 text-center text-sm font-bold text-white hover:bg-green-700">Call</a>
-          <a href="https://wa.me/84845659398" class="rounded-2xl bg-slate-950 px-4 py-3 text-center text-sm font-bold text-white">WhatsApp</a>
-          <a href="https://zalo.me/84845659398" class="rounded-2xl border border-slate-300 px-4 py-3 text-center text-sm font-bold text-slate-800 hover:bg-slate-50">Zalo</a>
+          <a href="tel:+84845659398" class="rounded-2xl bg-brand px-4 py-3 text-center text-[14px] font-bold text-white hover:bg-[#0f7a33]">Call</a>
+          <a href="https://wa.me/84845659398" class="rounded-2xl bg-slate-950 px-4 py-3 text-center text-[14px] font-bold text-white">WhatsApp</a>
+          <a href="https://zalo.me/84845659398" class="rounded-2xl border border-slate-300 px-4 py-3 text-center text-[14px] font-bold text-slate-800 hover:bg-slate-50">Zalo</a>
         </div>
 
-        <a href="mailto:sales@thaisonfood.com" class="mt-3 block w-full rounded-2xl border border-slate-300 px-5 py-3 text-center text-sm font-bold text-slate-800 hover:bg-slate-50">
+        <a href="mailto:sales@thaisonfood.com" class="mt-3 block w-full rounded-2xl border border-slate-300 px-5 py-3 text-center text-[14px] font-bold text-slate-800 hover:bg-slate-50">
           Email Sales
         </a>
       </div>
@@ -237,12 +353,12 @@
   </section>
 
   <footer class="bg-white border-t border-slate-200">
-    <div class="max-w-7xl mx-auto px-4 lg:px-8 py-8 text-sm text-slate-500 flex flex-col md:flex-row gap-4 md:items-center md:justify-between">
+    <div class="max-w-[1280px] mx-auto px-4 lg:px-6 py-7 text-[14px] text-slate-500 flex flex-col md:flex-row gap-4 md:items-center md:justify-between">
       <div>© 2026 Thái Sơn Food. All rights reserved.</div>
       <div class="flex gap-6">
-        <a href="#about" class="hover:text-green-700">About</a>
-        <a href="#products" class="hover:text-green-700">Products</a>
-        <a href="#contact" class="hover:text-green-700">Contact</a>
+        <a href="#about" class="hover:text-brand">About</a>
+        <a href="#products" class="hover:text-brand">Products</a>
+        <a href="#contact" class="hover:text-brand">Contact</a>
       </div>
     </div>
   </footer>
